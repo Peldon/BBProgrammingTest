@@ -6,20 +6,16 @@ public:
         if (child) {
             Status childStatus;
             do{
-            while (true) {
                 childStatus = child->Execute(e, b);
-                if (AbortCondition(childStatus, b)) {
-                    break;
-                }
-            }
+            } while (RepeatCondition(childStatus, b));
             return childStatus;
         }
         return Status::FAILURE;
     };
 
     /* override this to implement the condition for the repeater
-     * return true to stop repeating, false for keep repeating
+     * return true to keep repeating, false for stop repeating
      */
-    virtual bool AbortCondition(Status s, Blackboard* b) = 0;
+    virtual bool RepeatCondition(Status s, Blackboard* b) = 0;
 };
 
