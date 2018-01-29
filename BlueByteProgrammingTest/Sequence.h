@@ -8,10 +8,11 @@
 class Sequence : public Controlflow {
 public:
     /* if priority is set to true, the sequence will not store the running child and always start with the first child */
-    Sequence(bool priority = false) : priority(priority) {};
+    Sequence(bool priority = false, std::string uniqueName = "") : priority(priority), blackboardKeyForIndex(uniqueName) {};
     Status Execute(Entity* e, Blackboard* b) override;
 
 private:
     bool priority = false;
+    std::string blackboardKeyForIndex = "";
 };
 

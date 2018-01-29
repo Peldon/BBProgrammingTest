@@ -161,6 +161,7 @@
     <ClInclude Include="IsDogBoredCondition.h" />
     <ClInclude Include="IsDogHungryCondition.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="Repeater.h" />
     <ClInclude Include="Selector.h" />
     <ClInclude Include="Sequence.h" />
   </ItemGroup>

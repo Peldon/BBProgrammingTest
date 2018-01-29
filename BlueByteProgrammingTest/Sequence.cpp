@@ -1,11 +1,13 @@
 #include "Sequence.h"
+#include "Blackboard.h"
 
 Status Sequence::Execute(Entity* e, Blackboard* b){
     if (children.empty()) {
         return Status::SUCCESS;
     }
-    if (priority) {
-        index = 0;
+    unsigned int index = 0;
+    if (!priority) {
+        index = b->GetUInt(blackboardKeyForIndex);
     }
     while (true) {
         Node* child = children.at(index);
@@ -16,8 +18,10 @@ Status Sequence::Execute(Entity* e, Blackboard* b){
         }else{
             index++;
             if (index >= children.size()) {
-                index = 0;
+                b->SetUInt(blackboardKeyForIndex, 0);
                 return Status::SUCCESS;
+            }else{
+                b->SetUInt(blackboardKeyForIndex, index);
             }
         }
     }

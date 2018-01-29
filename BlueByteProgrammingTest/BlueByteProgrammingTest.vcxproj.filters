@@ -84,7 +84,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Inverter.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Repeater.h">
+      <Filter>Header Files\Behaviortree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

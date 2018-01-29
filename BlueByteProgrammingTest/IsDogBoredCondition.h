@@ -7,9 +7,9 @@ class IsDogBoredCondition :
     public Condition {
 public:
     bool CheckCondition(Entity* e, Blackboard* b) override {
-        return b->GetBool(blackboardKey);
+        return b->GetBool(BBKEY_ISBORED);
     };
 
 private:
-    const std::string blackboardKey = "isBored";
+    const std::string BBKEY_ISBORED = "isBored";
 };

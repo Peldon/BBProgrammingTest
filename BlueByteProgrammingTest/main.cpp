@@ -9,6 +9,7 @@
 #include "IsDogBoredCondition.h"
 #include "DogEatAction.h"
 #include "DogPlayAction.h"
+#include "DogIdleAction.h"
 
 using namespace std;
 
@@ -17,11 +18,11 @@ int main() {
     cout << "Gerald Schenke 29.01.2018" << endl;
 
     // bring some dogs to life
-    Dog* dog1 = new Dog("Rocky");
-    Dog* dog2 = new Dog("Daisy");
-    Dog* dog3 = new Dog("Bella");
-    Dog* dog4 = new Dog("Buddy");
-    Dog* dog5 = new Dog("Lucky");
+    Dog* dog1 = new Dog("Rocky", 10, 15);
+    Dog* dog2 = new Dog("Daisy", 4, 4);
+    Dog* dog3 = new Dog("Bella", 7, 5);
+    Dog* dog4 = new Dog("Buddy", 3, 9);
+    Dog* dog5 = new Dog("Lucky", 9, 18);
     Blackboard* bb1 = new Blackboard();
     Blackboard* bb2 = new Blackboard();
     Blackboard* bb3 = new Blackboard();
@@ -29,20 +30,22 @@ int main() {
     Blackboard* bb5 = new Blackboard();
 
     // build BT for dog behavior
-    Sequence* eatSequence = new Sequence();
+    Sequence* eatSequence = new Sequence(false, "eatSequence");
     eatSequence->AddChild(new IsDogHungryCondition());
     eatSequence->AddChild(new DogEatAction());
-    Sequence* playSequence = new Sequence();
+    Sequence* playSequence = new Sequence(false, "playSequence");
     playSequence->AddChild(new IsDogBoredCondition());
     playSequence->AddChild(new DogPlayAction());
     // this is a priority selector, so the dog stops playing and start eating, when exhausted
     Selector* rootSelector = new Selector(true);
     rootSelector->AddChild(eatSequence);
     rootSelector->AddChild(playSequence);
-
+    rootSelector->AddChild(new DogIdleAction());
     Behaviortree* dogBehavior = new Behaviortree(rootSelector);
+
     // endless simulation
-    for (;;) {
+    for (int i = 0; i < 1000; i++) {
+        //cout << i << endl;
         Status result1 = dogBehavior->Execute(dog1, bb1);
         Status result2 = dogBehavior->Execute(dog2, bb2);
         Status result3 = dogBehavior->Execute(dog3, bb3);

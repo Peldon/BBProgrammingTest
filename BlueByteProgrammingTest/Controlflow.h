@@ -10,7 +10,5 @@ public:
 
 protected:
     std::vector<Node*> children;
-    // TODO state! move this to blackboard!?
-    size_t index = 0;
 };
 
