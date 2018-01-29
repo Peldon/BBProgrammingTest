@@ -1,15 +1,8 @@
 #pragma once
 #include "Node.h"
-class Condition :
-    public Node {
+
+class Condition : public Node {
 public:
-    Status Execute(Entity* e, Blackboard* b) {
-        if (CheckCondition(e, b)) {
-            return Status::SUCCESS;
-        } else {
-            return Status::FAILURE;
-        }
-    }
+    Status Execute(Entity* e, Blackboard* b);
     virtual bool CheckCondition(Entity* e, Blackboard* b) = 0;
 };
-

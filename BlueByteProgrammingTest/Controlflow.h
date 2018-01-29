@@ -3,10 +3,9 @@
 #include <vector>
 
 
-class Controlflow :
-    public Node {
+class Controlflow : public Node {
 public:
-    void AddChild(Node* child) { children.push_back(child); };
+    void AddChild(Node* child);
 
 protected:
     std::vector<Node*> children;

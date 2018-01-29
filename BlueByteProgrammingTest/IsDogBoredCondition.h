@@ -3,12 +3,9 @@
 #include "Dog.h"
 #include "Blackboard.h"
 
-class IsDogBoredCondition :
-    public Condition {
+class IsDogBoredCondition : public Condition {
 public:
-    bool CheckCondition(Entity* e, Blackboard* b) override {
-        return b->GetBool(BBKEY_ISBORED);
-    };
+    bool CheckCondition(Entity* e, Blackboard* b) override;
 
 private:
     const std::string BBKEY_ISBORED = "isBored";

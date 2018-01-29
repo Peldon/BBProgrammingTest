@@ -4,13 +4,13 @@
 void Dog::Tick() {
     switch (myState) {
     case PLAYING:
-        myEnergy -= 2 * energyConsumption;
+        myEnergy -= 2 * myEnergyConsumption;
         break;
     case EATING:
         myEnergy += ENERGY_FOOD_GAIN;
         break;
     case IDLE:
-        myEnergy -= energyConsumption;
+        myEnergy -= myEnergyConsumption;
         break;
     }
 }
@@ -34,5 +34,5 @@ void Dog::Idle() {
 }
 
 bool Dog::IsHungry() const {
-    return myEnergy <= hungryThreshold;
+    return myEnergy <= myHungryThreshold;
 }

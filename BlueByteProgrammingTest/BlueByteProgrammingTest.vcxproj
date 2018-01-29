@@ -139,9 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Behaviortree.cpp" />
+    <ClCompile Include="Blackboard.cpp" />
+    <ClCompile Include="Condition.cpp" />
+    <ClCompile Include="Controlflow.cpp" />
     <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="DogAction.cpp" />
+    <ClCompile Include="DogEatAction.cpp" />
+    <ClCompile Include="DogIdleAction.cpp" />
+    <ClCompile Include="DogPlayAction.cpp" />
     <ClCompile Include="DogSimulation.cpp" />
+    <ClCompile Include="Inverter.cpp" />
+    <ClCompile Include="IsDogBoredCondition.cpp" />
+    <ClCompile Include="IsDogHungryCondition.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Repeater.cpp" />
     <ClCompile Include="Selector.cpp" />
     <ClCompile Include="Sequence.cpp" />
   </ItemGroup>

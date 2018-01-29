@@ -6,42 +6,14 @@
  */
 class Blackboard {
 public:
-    void SetBool(std::string key, bool value) {
-        bools[key] = value;
-    }
-    bool GetBool(std::string key) {
-        if (bools.find(key) == bools.end()) {
-            bools[key] = false;
-        }
-        return bools[key];
-    }
-    void SetInt(std::string key, int value) {
-        ints[key] = value; 
-    }
-    int GetInt(std::string key) {
-        if (ints.find(key) == ints.end()) {
-            ints[key] = 0;
-        }
-        return ints[key];
-    }
-    void SetUInt(std::string key, unsigned int value) { 
-        uints[key] = value; 
-    }
-    int GetUInt(std::string key) {
-        if (uints.find(key) == uints.end()) {
-            uints[key] = 0;
-        }
-        return uints[key];
-    }
-    void SetString(std::string key, std::string value) {
-        strings[key] = value;
-    }
-    std::string GetString(std::string key) {
-        if (strings.find(key) == strings.end()) {
-            strings[key] = "";
-        }
-        return strings[key];
-    }
+    void SetBool(std::string key, bool value);
+    bool GetBool(std::string key);
+    void SetInt(std::string key, int value);
+    int GetInt(std::string key);
+    void SetUInt(std::string key, unsigned int value);
+    int GetUInt(std::string key);
+    void SetString(std::string key, std::string value);
+    std::string GetString(std::string key);
 private:
     std::map<std::string, bool> bools;
     std::map<std::string, int> ints;
