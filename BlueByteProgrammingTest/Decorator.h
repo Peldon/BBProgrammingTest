@@ -10,7 +10,7 @@ public:
         }
         return Status::FAILURE;
     };
-private: 
+protected: 
     Node* child = nullptr;
 };
 

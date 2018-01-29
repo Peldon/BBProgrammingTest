@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Dog.cpp" />
-    <ClCompile Include="IsHungry.cpp" />
+    <ClCompile Include="Inverter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Selector.cpp" />
     <ClCompile Include="Sequence.cpp" />
@@ -153,8 +153,13 @@
     <ClInclude Include="Controlflow.h" />
     <ClInclude Include="Decorator.h" />
     <ClInclude Include="Dog.h" />
+    <ClInclude Include="DogEatAction.h" />
+    <ClInclude Include="DogIdleAction.h" />
+    <ClInclude Include="DogPlayAction.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="IsHungry.h" />
+    <ClInclude Include="Inverter.h" />
+    <ClInclude Include="IsDogBoredCondition.h" />
+    <ClInclude Include="IsDogHungryCondition.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Selector.h" />
     <ClInclude Include="Sequence.h" />

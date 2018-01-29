@@ -30,7 +30,7 @@
     <ClCompile Include="Selector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IsHungry.cpp">
+    <ClCompile Include="Inverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,9 +39,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Dog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IsHungry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Behaviortree.h">
@@ -70,6 +67,24 @@
     </ClInclude>
     <ClInclude Include="Blackboard.h">
       <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="IsDogHungryCondition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IsDogBoredCondition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DogEatAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DogPlayAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DogIdleAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inverter.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

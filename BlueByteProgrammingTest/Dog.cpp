@@ -23,16 +23,25 @@ void Dog::Tick() {
     }
 }
 void Dog::Eat() {
+    if (myState == State::EATING) {
+        return;
+    }
     cout << myName.c_str() << " started eating" << endl;
     myState = State::EATING;
     eatTime = 0;
 }
 void Dog::Play() {
+    if (myState == State::PLAYING) {
+        return;
+    }
     cout << myName.c_str() << " started playing" << endl;
     myState = State::PLAYING;
     playTime = 0;
 }
 void Dog::Idle() {
+    if (myState == State::IDLE) {
+        return;
+    }
     cout << myName.c_str() << " started resting" << endl;
     myState = State::IDLE;
 }

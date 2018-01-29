@@ -33,7 +33,7 @@ private:
     const float HUNGRY_THRESHOLD = 5.f;
 
     State myState = State::IDLE;
-    float myEnergy;
+    float myEnergy = 50.f;
     std::string myName;
 
     int eatTime = 0;
