@@ -139,31 +139,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Behaviortree.cpp" />
-    <ClCompile Include="Blackboard.cpp" />
-    <ClCompile Include="Condition.cpp" />
-    <ClCompile Include="Controlflow.cpp" />
+    <ClCompile Include="BT/Behaviortree.cpp" />
+    <ClCompile Include="BT/Blackboard.cpp" />
+    <ClCompile Include="BT/Condition.cpp" />
+    <ClCompile Include="BT/Controlflow.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="DogAction.cpp" />
     <ClCompile Include="DogEatAction.cpp" />
     <ClCompile Include="DogIdleAction.cpp" />
     <ClCompile Include="DogPlayAction.cpp" />
     <ClCompile Include="DogSimulation.cpp" />
-    <ClCompile Include="Inverter.cpp" />
+    <ClCompile Include="BT/Inverter.cpp" />
     <ClCompile Include="IsDogBoredCondition.cpp" />
     <ClCompile Include="IsDogHungryCondition.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Repeater.cpp" />
-    <ClCompile Include="Selector.cpp" />
-    <ClCompile Include="Sequence.cpp" />
+    <ClCompile Include="BT/Repeater.cpp" />
+    <ClCompile Include="BT/Selector.cpp" />
+    <ClCompile Include="BT/Sequence.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Action.h" />
-    <ClInclude Include="Behaviortree.h" />
-    <ClInclude Include="Blackboard.h" />
-    <ClInclude Include="Condition.h" />
-    <ClInclude Include="Controlflow.h" />
-    <ClInclude Include="Decorator.h" />
+    <ClInclude Include="BT/Action.h" />
+    <ClInclude Include="BT/Behaviortree.h" />
+    <ClInclude Include="BT/Blackboard.h" />
+    <ClInclude Include="BT/Condition.h" />
+    <ClInclude Include="BT/Controlflow.h" />
+    <ClInclude Include="BT/Decorator.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="DogAction.h" />
     <ClInclude Include="DogEatAction.h" />
@@ -171,13 +171,13 @@
     <ClInclude Include="DogPlayAction.h" />
     <ClInclude Include="DogSimulation.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="Inverter.h" />
+    <ClInclude Include="BT/Inverter.h" />
     <ClInclude Include="IsDogBoredCondition.h" />
     <ClInclude Include="IsDogHungryCondition.h" />
-    <ClInclude Include="Node.h" />
-    <ClInclude Include="Repeater.h" />
-    <ClInclude Include="Selector.h" />
-    <ClInclude Include="Sequence.h" />
+    <ClInclude Include="BT/Node.h" />
+    <ClInclude Include="BT/Repeater.h" />
+    <ClInclude Include="BT/Selector.h" />
+    <ClInclude Include="BT/Sequence.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

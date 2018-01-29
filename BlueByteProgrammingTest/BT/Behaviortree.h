@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Node.h"
-#include "Entity.h"
+#include "../Entity.h"
 #include "Blackboard.h"
 
 class Behaviortree : public Node {

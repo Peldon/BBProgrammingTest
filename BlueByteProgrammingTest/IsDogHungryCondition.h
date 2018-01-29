@@ -1,5 +1,5 @@
 #pragma once
-#include "Condition.h"
+#include "BT/Condition.h"
 #include "Dog.h"
 
 class IsDogHungryCondition : public Condition {

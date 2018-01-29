@@ -1,7 +1,8 @@
 #pragma once
-#include "Condition.h"
+#include "BT/Condition.h"
+#include "BT/Blackboard.h"
 #include "Dog.h"
-#include "Blackboard.h"
+
 
 class IsDogBoredCondition : public Condition {
 public:

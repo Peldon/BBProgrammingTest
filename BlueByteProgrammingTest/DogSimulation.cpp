@@ -3,10 +3,10 @@
 #include <iostream>
 #include <memory>
 
-#include "Behaviortree.h"
-#include "Sequence.h"
-#include "Selector.h"
-#include "Blackboard.h"
+#include "BT/Behaviortree.h"
+#include "BT/Sequence.h"
+#include "BT/Selector.h"
+#include "BT/Blackboard.h"
 #include "Dog.h"
 #include "IsDogHungryCondition.h"
 #include "IsDogBoredCondition.h"
