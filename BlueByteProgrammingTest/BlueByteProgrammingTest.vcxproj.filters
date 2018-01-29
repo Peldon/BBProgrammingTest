@@ -13,27 +13,63 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Behaviortree">
+      <UniqueIdentifier>{3725b433-b9a8-4bc5-a0e9-dce011746fec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestProgram.cpp">
+    <ClCompile Include="Dog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vector3d.cpp">
+    <ClCompile Include="Sequence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Selector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IsHungry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TestProgram.h">
+    <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Math.h">
+    <ClInclude Include="Dog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vector3d.h">
+    <ClInclude Include="IsHungry.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviortree.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Condition.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Controlflow.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Decorator.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Selector.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="Blackboard.h">
+      <Filter>Header Files\Behaviortree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

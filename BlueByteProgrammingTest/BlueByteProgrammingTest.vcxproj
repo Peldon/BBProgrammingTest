@@ -139,14 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="IsHungry.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TestProgram.cpp" />
-    <ClCompile Include="Vector3d.cpp" />
+    <ClCompile Include="Selector.cpp" />
+    <ClCompile Include="Sequence.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Math.h" />
-    <ClInclude Include="TestProgram.h" />
-    <ClInclude Include="Vector3d.h" />
+    <ClInclude Include="Action.h" />
+    <ClInclude Include="Behaviortree.h" />
+    <ClInclude Include="Blackboard.h" />
+    <ClInclude Include="Condition.h" />
+    <ClInclude Include="Controlflow.h" />
+    <ClInclude Include="Decorator.h" />
+    <ClInclude Include="Dog.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="IsHungry.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Selector.h" />
+    <ClInclude Include="Sequence.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

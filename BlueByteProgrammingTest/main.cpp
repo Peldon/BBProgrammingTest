@@ -1,40 +1,46 @@
-#include "TestProgram.h"
-
 #include <iostream>
-#include "Math.h"
-#include "Vector3d.h"
+
+#include "Behaviortree.h"
+#include "Sequence.h"
+#include "Selector.h"
+#include "Blackboard.h"
+#include "Dog.h"
+#include "main.h"
 
 using namespace std;
-
-// just a method to test some functionality. should write unittests instead...
-void test() {
-
-    cout << "TEST Vector3d" << endl;
-    Vector3d zero;
-    Vector3d a(1, 2, 3);
-    Vector3d b(4, 5, 6);
-    cout << zero.toString() << endl;
-    cout << a.toString() << endl;
-    cout << b.toString() << endl;
-    cout << (a + b).toString() << endl;
-    cout << (a - b).toString() << endl;
-    cout << (a * 2).toString() << endl;
-    cout << (a / 3).toString(2) << endl;
-    cout << a.dot(b) << endl;
-
-    cout << "TEST Math" << endl;
-    cout << Math::dot(a, b) << endl;
-}
-
 
 int main() {
     cout << "Blue Byte Programming Test" << endl;
     cout << "Gerald Schenke 29.01.2018" << endl;
 
-    TestProgram program;
-    program.run();
+    // bring some dogs to life
+    Dog* myDog1 = new Dog("Rocky");
+    Dog* myDog2 = new Dog("Daisy");
+    Dog* myDog3 = new Dog("Bella");
+    Dog* myDog4 = new Dog("Buddy");
+    Dog* myDog5 = new Dog("Lucky");
 
-    test();
+    // build BT for dog behavior
+    Sequence* mySequence = new Sequence();
+    Selector* mySelector = new Selector();
+    mySelector->AddChild(mySequence);
+
+    Behaviortree* myDogBehavior = new Behaviortree(mySelector);
+    // endless simulation
+    for (;;) {
+        Status result1 = myDogBehavior->Execute(myDog1, new Blackboard());
+        Status result2 = myDogBehavior->Execute(myDog2, new Blackboard());
+        Status result3 = myDogBehavior->Execute(myDog3, new Blackboard());
+        Status result4 = myDogBehavior->Execute(myDog4, new Blackboard());
+        Status result5 = myDogBehavior->Execute(myDog5, new Blackboard());
+
+        myDog1->Tick();
+        myDog2->Tick();
+        myDog3->Tick();
+        myDog4->Tick();
+        myDog5->Tick();
+    }
+
 
     cout << "Goodbye" << endl;
     return 0;

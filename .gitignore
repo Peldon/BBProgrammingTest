@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+3ba2cbef-f0e3-4214-b2ac-81a5385ec1cc_Programmer_Test.docx
+*.odt#
+BB_Programmer_Test.odt
