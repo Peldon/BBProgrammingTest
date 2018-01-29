@@ -16,19 +16,19 @@ void Dog::Tick() {
 }
 void Dog::Eat() {
     if (myState != State::EATING) {
-        cout << myName.c_str() << " started eating" << " (energy=" << myEnergy << ")" << endl;
+        std::cout << myName.c_str() << " started eating" << " (energy=" << myEnergy << ")" << std::endl;
     }
     myState = State::EATING;
 }
 void Dog::Play() {
     if (myState != State::PLAYING) {
-        cout << myName.c_str() << " started playing" << " (energy=" << myEnergy << ")" << endl;
+        std::cout << myName.c_str() << " started playing" << " (energy=" << myEnergy << ")" << std::endl;
     }
     myState = State::PLAYING;
 }
 void Dog::Idle() {
     if (myState != State::IDLE) {
-        cout << myName.c_str() << " started idle" << " (energy=" << myEnergy << ")" << endl;
+        std::cout << myName.c_str() << " started idle" << " (energy=" << myEnergy << ")" << std::endl;
     }
     myState = State::IDLE;
 }

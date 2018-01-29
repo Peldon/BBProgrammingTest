@@ -6,7 +6,7 @@
 
 class Behaviortree : public Node {
 public:
-    Behaviortree(Node* rootNode) : root(rootNode) {};
+    Behaviortree(Node* root) : root(root) {};
     Status Execute(Entity* e, Blackboard* b) {
         if (root) {
             return root->Execute(e, b);

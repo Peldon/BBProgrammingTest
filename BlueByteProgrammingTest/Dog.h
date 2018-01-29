@@ -2,8 +2,6 @@
 #include "Entity.h"
 #include <iostream>
 
-using namespace std;
-
 /* 
  * 
  * Note: First I wanted to implement a variable myBoredom here, but decided to store it in the blackboard since it is purely controlling behavior 

@@ -5,6 +5,7 @@ public:
     Status Execute(Entity* e, Blackboard* b) override {
         if (child) {
             Status childStatus;
+            do{
             while (true) {
                 childStatus = child->Execute(e, b);
                 if (AbortCondition(childStatus, b)) {

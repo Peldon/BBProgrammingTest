@@ -30,6 +30,9 @@
     <ClCompile Include="Selector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DogSimulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dog.h">
@@ -88,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="DogSimulation.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
