@@ -3,17 +3,27 @@
 #include "Action.h"
 #include "Dog.h"
 
-class DogEatAction : public Action {
+class DogAction : public Action {
 
 public:
+    DogAction(std::string actionName, int actionDuration) : actionName(actionName), actionDuration(actionDuration) {};
     Status Execute(Entity* e, Blackboard* b) {
         Dog* dog = static_cast<Dog*>(e);
         if (dog) {
-            ExecuteDogAction(dog, b);
+            if (b->GetString(BBKEY_CURRENTACTION) != actionName) {
+                b->SetString(BBKEY_CURRENTACTION, actionName);
+                b->SetInt(BBKEY_ACTIONTIME, 0);
+            }
+            return ExecuteDogAction(dog, b);
         }
         return Status::FAILURE;
     }
-private:
-    const std::string BBKEY_ACTIONTIME = "actionTime";
-    const std::string BBKEY_CURRENTACTION = "currentAction";
+
+    virtual Status ExecuteDogAction(Dog* dog, Blackboard* b) = 0;
+
+protected:
+    const std::string actionName;
+    const int actionDuration;
+    const std::string BBKEY_ACTIONTIME = "DogActionTime";
+    const std::string BBKEY_CURRENTACTION = "DogActionType";
 };

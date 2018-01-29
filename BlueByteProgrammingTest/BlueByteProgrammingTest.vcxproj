@@ -153,6 +153,7 @@
     <ClInclude Include="Controlflow.h" />
     <ClInclude Include="Decorator.h" />
     <ClInclude Include="Dog.h" />
+    <ClInclude Include="DogAction.h" />
     <ClInclude Include="DogEatAction.h" />
     <ClInclude Include="DogIdleAction.h" />
     <ClInclude Include="DogPlayAction.h" />

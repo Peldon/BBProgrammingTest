@@ -35,9 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Dog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -87,6 +84,12 @@
       <Filter>Header Files\Behaviortree</Filter>
     </ClInclude>
     <ClInclude Include="Repeater.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="DogAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
       <Filter>Header Files\Behaviortree</Filter>
     </ClInclude>
   </ItemGroup>

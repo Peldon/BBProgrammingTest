@@ -7,7 +7,6 @@ using namespace std;
 /* 
  * 
  * Note: First I wanted to implement a variable myBoredom here, but decided to store it in the blackboard since it is purely controlling behavior 
- * and I wanted to use the blackboard for something.
  */
 class Dog : public Entity {
 public:
@@ -18,7 +17,7 @@ public:
 
     bool IsHungry() const;
 
-    void Tick() override;
+    void Tick();
     void Eat();
     void Play();
     void Idle();
