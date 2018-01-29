@@ -13,6 +13,7 @@
 #include "DogEatAction.h"
 #include "DogPlayAction.h"
 #include "DogIdleAction.h"
+#include "BT/Inverter.h"
 
 void DogSimulation::Run() {
     // bring some dogs to life
@@ -37,10 +38,12 @@ void DogSimulation::Run() {
     std::unique_ptr<DogIdleAction> dogIdleAction = std::make_unique<DogIdleAction>();
 
     // to make the BT completely stateless we need to give non-priority sequences/selectors a unique name, that is used for the blackboard
-    std::unique_ptr<Sequence> eatSequence = std::make_unique<Sequence>(false);
-    std::unique_ptr<Sequence> playSequence = std::make_unique<Sequence>(false);
+    std::unique_ptr<Sequence> eatSequence = std::make_unique<Sequence>(false, "eatSequence");
+    std::unique_ptr<Sequence> playSequence = std::make_unique<Sequence>(false, "playSequence");
     // this is a priority selector, so the dog stops playing and starts eating, when exhausted
     std::unique_ptr<Selector> rootSelector = std::make_unique<Selector>(true);
+
+    
 
     eatSequence->AddChild(isDogHungryCondition.get());
     eatSequence->AddChild(dogEatAction.get());

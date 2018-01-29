@@ -2,8 +2,8 @@
 #include "Entity.h"
 #include <iostream>
 
-/*
- *
+/* The dog class. I kept it as simple as possible to keep the focus on the BT, but still wanted to have a tick method since any real game object would tick as well.
+ * I made energy consumption and hungry threshold configurable to have some variety in dogs...
  * Note: First I wanted to implement a variable myBoredom here, but decided to store it in the blackboard since it is purely controlling behavior
  */
 class Dog : public Entity {

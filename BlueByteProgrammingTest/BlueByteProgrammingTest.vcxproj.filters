@@ -16,6 +16,9 @@
     <Filter Include="Header Files\Behaviortree">
       <UniqueIdentifier>{3725b433-b9a8-4bc5-a0e9-dce011746fec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Behaviortree">
+      <UniqueIdentifier>{ea2e49be-954e-41bd-9754-34d82c8c41eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,25 +27,7 @@
     <ClCompile Include="Dog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sequence.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Selector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DogSimulation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Behaviortree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Blackboard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Condition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Controlflow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DogAction.cpp">
@@ -57,49 +42,40 @@
     <ClCompile Include="DogPlayAction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Inverter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="IsDogBoredCondition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IsDogHungryCondition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Repeater.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="BT/Behaviortree.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
+    </ClCompile>
+    <ClCompile Include="BT/Blackboard.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
+    </ClCompile>
+    <ClCompile Include="BT/Condition.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
+    </ClCompile>
+    <ClCompile Include="BT/Controlflow.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
+    </ClCompile>
+    <ClCompile Include="BT/Inverter.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
+    </ClCompile>
+    <ClCompile Include="BT/Repeater.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
+    </ClCompile>
+    <ClCompile Include="BT/Selector.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
+    </ClCompile>
+    <ClCompile Include="BT/Sequence.cpp">
+      <Filter>Source Files\Behaviortree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dog.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Behaviortree.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Condition.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Controlflow.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Decorator.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Selector.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Sequence.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Action.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Blackboard.h">
-      <Filter>Header Files\Behaviortree</Filter>
     </ClInclude>
     <ClInclude Include="IsDogHungryCondition.h">
       <Filter>Header Files</Filter>
@@ -116,20 +92,47 @@
     <ClInclude Include="DogIdleAction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inverter.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
-    <ClInclude Include="Repeater.h">
-      <Filter>Header Files\Behaviortree</Filter>
-    </ClInclude>
     <ClInclude Include="DogAction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>Header Files\Behaviortree</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DogSimulation.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Action.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Behaviortree.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Blackboard.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Condition.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Controlflow.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Decorator.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Inverter.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Node.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Repeater.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Selector.h">
+      <Filter>Header Files\Behaviortree</Filter>
+    </ClInclude>
+    <ClInclude Include="BT/Sequence.h">
+      <Filter>Header Files\Behaviortree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

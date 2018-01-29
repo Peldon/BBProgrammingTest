@@ -28,7 +28,7 @@ void Dog::Play() {
 }
 void Dog::Idle() {
     if (myState != State::IDLE) {
-        std::cout << myName.c_str() << " started idle" << " (energy=" << myEnergy << ")" << std::endl;
+        std::cout << myName.c_str() << " started to idle" << " (energy=" << myEnergy << ")" << std::endl;
     }
     myState = State::IDLE;
 }
