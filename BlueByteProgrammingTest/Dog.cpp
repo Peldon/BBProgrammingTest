@@ -6,19 +6,20 @@ void Dog::Tick() {
     case PLAYING:
         myEnergy -= 2 * ENERGY_CONSUMPTION;
         playTime++;
-        if (playTime > EATING_TICKS) {
-            myState = State::IDLE;
+        if (playTime > MAX_PLAY_TICKS) {
+            Idle();
         }
         break;
     case EATING:
         myEnergy += ENERGY_FOOD_GAIN;
         eatTime++;
-        if (eatTime > EATING_TICKS) {
-            myState = State::IDLE;
+        if (eatTime > MAX_EAT_TICKS) {
+            Idle();
         }
         break;
     case IDLE:
         myEnergy -= ENERGY_CONSUMPTION;
+        idleTime++;
         break;
     }
 }
@@ -44,4 +45,5 @@ void Dog::Idle() {
     }
     cout << myName.c_str() << " started resting" << endl;
     myState = State::IDLE;
+    idleTime = 0;
 }
